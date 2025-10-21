@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("https://retrochat-t0lx.onrender.com");
+const socket = io("https://retrochat-t0lx.onrender.com", {
+  transports: ["websocket"], // 👈 ensures stable connection
+});
+
 
 export default function Chat() {
   const [chatInput, setChatInput] = useState("");
