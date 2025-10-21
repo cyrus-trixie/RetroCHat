@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
 // Attach socket.io to the HTTP server
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your frontend port (e.g. Vite or React)
+    origin: "https://tuchat.onrender.com", // your frontend port (e.g. Vite or React)
     methods: ["GET", "POST"],
   },
 });
